@@ -1,0 +1,148 @@
+12/12/14 16:23:10 Xvnc version TightVNC-1.3.9
+12/12/14 16:23:10 Copyright (C) 2000-2007 TightVNC Group
+12/12/14 16:23:10 Copyright (C) 1999 AT&T Laboratories Cambridge
+12/12/14 16:23:10 All Rights Reserved.
+12/12/14 16:23:10 See http://www.tightvnc.com/ for information on TightVNC
+12/12/14 16:23:10 Desktop name 'X' (raspberrypi:1)
+12/12/14 16:23:10 Protocol versions supported: 3.3, 3.7, 3.8, 3.7t, 3.8t
+12/12/14 16:23:10 Listening for VNC connections on TCP port 5901
+Font directory '/usr/share/fonts/X11/75dpi/' not found - ignoring
+Font directory '/usr/share/fonts/X11/100dpi/' not found - ignoring
+xrdb: No such file or directory
+xrdb: can't open file '/home/pi/.Xresources'
+
+12/12/14 16:23:46 Got connection from client 192.168.1.210
+12/12/14 16:23:46 Using protocol version 3.3
+12/12/14 16:23:49 Client 192.168.1.210 gone
+12/12/14 16:23:49 Statistics:
+12/12/14 16:23:49   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:23:49 Got connection from client 192.168.1.210
+12/12/14 16:23:49 Using protocol version 3.3
+12/12/14 16:23:49 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:23:49 Client 192.168.1.210 gone
+12/12/14 16:23:49 Statistics:
+12/12/14 16:23:49   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:24:05 Got connection from client 192.168.1.210
+12/12/14 16:24:05 Using protocol version 3.3
+12/12/14 16:24:05 Client 192.168.1.210 gone
+12/12/14 16:24:05 Statistics:
+12/12/14 16:24:05   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:25:04 Got connection from client 192.168.1.210
+12/12/14 16:25:04 Using protocol version 3.3
+12/12/14 16:25:13 Client 192.168.1.210 gone
+12/12/14 16:25:13 Statistics:
+12/12/14 16:25:13   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:25:13 Got connection from client 192.168.1.210
+12/12/14 16:25:13 Using protocol version 3.3
+12/12/14 16:25:13 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:25:13 Client 192.168.1.210 gone
+12/12/14 16:25:13 Statistics:
+12/12/14 16:25:13   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:25:20 Got connection from client 192.168.1.210
+12/12/14 16:25:20 Using protocol version 3.3
+12/12/14 16:25:20 Client 192.168.1.210 gone
+12/12/14 16:25:20 Statistics:
+12/12/14 16:25:20   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:25:27 Got connection from client 192.168.1.210
+12/12/14 16:25:27 Using protocol version 3.3
+12/12/14 16:25:30 Client 192.168.1.210 gone
+12/12/14 16:25:30 Statistics:
+12/12/14 16:25:30   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:25:30 Got connection from client 192.168.1.210
+12/12/14 16:25:30 Using protocol version 3.3
+12/12/14 16:25:30 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:25:30 Client 192.168.1.210 gone
+12/12/14 16:25:30 Statistics:
+12/12/14 16:25:30   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:27:53 Got connection from client 192.168.1.210
+12/12/14 16:27:53 Using protocol version 3.3
+12/12/14 16:27:53 Client 192.168.1.210 gone
+12/12/14 16:27:53 Statistics:
+12/12/14 16:27:53   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:27:59 Got connection from client 192.168.1.210
+12/12/14 16:27:59 Using protocol version 3.3
+12/12/14 16:28:07 Client 192.168.1.210 gone
+12/12/14 16:28:07 Statistics:
+12/12/14 16:28:07   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:28:07 Got connection from client 192.168.1.210
+12/12/14 16:28:07 Using protocol version 3.3
+12/12/14 16:28:07 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:28:07 Client 192.168.1.210 gone
+12/12/14 16:28:07 Statistics:
+12/12/14 16:28:07   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:29:26 Got connection from client 192.168.1.210
+12/12/14 16:29:26 Using protocol version 3.3
+12/12/14 16:29:27 Client 192.168.1.210 gone
+12/12/14 16:29:27 Statistics:
+12/12/14 16:29:27   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:32:45 Got connection from client 192.168.1.210
+12/12/14 16:32:45 Using protocol version 3.3
+12/12/14 16:32:47 Client 192.168.1.210 gone
+12/12/14 16:32:47 Statistics:
+12/12/14 16:32:47   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:32:47 Got connection from client 192.168.1.210
+12/12/14 16:32:47 Using protocol version 3.3
+12/12/14 16:32:47 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:32:47 Client 192.168.1.210 gone
+12/12/14 16:32:47 Statistics:
+12/12/14 16:32:47   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:37:38 Got connection from client 192.168.1.210
+12/12/14 16:37:38 Using protocol version 3.3
+12/12/14 16:37:43 Client 192.168.1.210 gone
+12/12/14 16:37:43 Statistics:
+12/12/14 16:37:43   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:37:43 Got connection from client 192.168.1.210
+12/12/14 16:37:43 Using protocol version 3.3
+12/12/14 16:37:43 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:37:43 Client 192.168.1.210 gone
+12/12/14 16:37:43 Statistics:
+12/12/14 16:37:43   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:37:44 Got connection from client 192.168.1.210
+12/12/14 16:37:44 Using protocol version 3.3
+12/12/14 16:37:44 Too many authentication failures - client rejected
+12/12/14 16:37:44 Client 192.168.1.210 gone
+12/12/14 16:37:44 Statistics:
+12/12/14 16:37:44   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:37:57 Got connection from client 192.168.1.210
+12/12/14 16:37:57 Using protocol version 3.3
+12/12/14 16:37:57 Too many authentication failures - client rejected
+12/12/14 16:37:57 Client 192.168.1.210 gone
+12/12/14 16:37:57 Statistics:
+12/12/14 16:37:57   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:43:55 Got connection from client 192.168.1.210
+12/12/14 16:43:55 Using protocol version 3.3
+12/12/14 16:43:58 Client 192.168.1.210 gone
+12/12/14 16:43:58 Statistics:
+12/12/14 16:43:58   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:43:58 Got connection from client 192.168.1.210
+12/12/14 16:43:58 Using protocol version 3.3
+12/12/14 16:43:58 rfbVncAuthProcessResponse: authentication failed from 192.168.1.210
+12/12/14 16:43:58 Client 192.168.1.210 gone
+12/12/14 16:43:58 Statistics:
+12/12/14 16:43:58   framebuffer updates 0, rectangles 0, bytes 0
+
+12/12/14 16:44:02 Got connection from client 192.168.1.210
+12/12/14 16:44:02 Using protocol version 3.3
+12/12/14 16:44:02 Too many authentication failures - client rejected
+12/12/14 16:44:02 Client 192.168.1.210 gone
+12/12/14 16:44:02 Statistics:
+12/12/14 16:44:02   framebuffer updates 0, rectangles 0, bytes 0

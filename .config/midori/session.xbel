@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel PUBLIC "+//IDN python.org//DTD XML Bookmark Exchange Language 1.0//EN//XML" "http://www.python.org/topics/xml/dtds/xbel-1.0.dtd">
+<xbel version="1.0" xmlns:midori="http://www.twotoasts.de">
+<info>
+<metadata midori:current="1" owner="http://www.twotoasts.de"/>
+</info>
+<bookmark href="http://wiki.xfce.org/midori/faq">
+<title>‪midori:faq [Xfce Wiki]</title>
+<info>
+<metadata midori:icon="http://wiki.xfce.org/lib/tpl/xfce/images/favicon.ico" midori:history-step="2" owner="http://www.twotoasts.de"/>
+</info>
+</bookmark>
+<bookmark href="https://www.google.com/chrome/browser/desktop/index.html">
+<title>‪Chrome Browser</title>
+<info>
+<metadata midori:history-step="2" midori:icon="text-html" owner="http://www.twotoasts.de"/>
+</info>
+</bookmark>
+</xbel>

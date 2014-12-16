@@ -1,0 +1,107 @@
+			AREA	project1, CODE, READONLY
+
+PINSELO		EQU		0xE002C000		;controls the function of the pins
+UOSTART		EQU		0xE000C000		;start of the UART0 registers
+LCR0		EQU		0xC				;line control register for UART0
+LSR0		EQU		0x14			;line status register for UART0
+RAMSTART	EQU		0x40000000		;start of onboard RAM for 2104
+MATMAX		EQU		0x39			;The matrix limits ****Must be changed for different String!****
+	
+			ENTRY
+start
+			MOV 	R2, #0
+			LDR 	sp,=RAMSTART		;set up stack pointer
+			BL		UARTConfig			;initialize/configure UART0
+			LDR	    R1,=STARTMSG		;starting address of characters
+
+LoopMSG	
+			LDRB	R0,[R1],#1		;load character, increment address
+			CMP		R0,#0			;null terminated?
+			BLNE	Transmit		;send character to UART
+			BNE		LoopMSG			;contiue if not a '0'
+
+			LDR  	R1, =MAGENDAVID
+			MOV 	R0, #0x31
+			MOV     R3, #0x31		;Index
+
+MainLoop				
+			MOV     R2, R0 			;Save the prev X
+			LDRB 	R0, [R1], #1	;Load X
+			CMP     R0, #0
+			LDREQ	R1,=ENDMSG
+			BEQ     LoopDone
+			
+			LDRB	R0, [R1], #1    ;Load Y
+Loop		
+			CMP 	R3, #MATMAX		
+			MOVEQ	R3, #0x31
+			LDREQ   R8, =PRINTLINE
+			LDRBEQ	R7, [R8], #1
+			BLEQ	TransmitR7
+			BEQ     MainLoop
+			
+			CMP		R3, R0
+			LDREQ	R8, =PRINTSTAR
+			LDRBEQ	R7, [R8], #1
+			BLEQ	TransmitR7
+			CMP		R3, R0
+			ADD		R3, R3, #0x1
+			BEQ     MainLoop		;Read next Y
+			
+			LDRNE	R8, =PRINTSPACE
+			LDRBNE	R7, [R8], #1
+			BLNE	TransmitR7
+			B       Loop
+
+LoopDone	
+			LDRB	R0,[R1],#1		;load character, increment address
+			CMP		R0,#0			;null terminated?
+			BLNE	Transmit		;send character to UART
+			BNE		LoopDone	    ;contiue if not a '0'
+			
+Done 		B       Done
+	
+UARTConfig
+			STMIA	sp!, {r5,r6,lr}
+			LDR		r5,=PINSELO		;base address of register
+			LDR		r6,[r5]			;get contents
+			BIC		r6,r6,#0xF		;clear out lower nibble
+			ORR		r6,r6,#0x5		;sets P0.0 to Tx0 and P0.1 to Rx0
+			STR		r6, [r5]		;r/modify/w back to register
+			LDR		r5,=UOSTART		
+			MOV		r6, #0x83		;set 8 bits, no parity, 1 stop bit
+			STRB	r6,[r5, #LCR0]	;write control byte to LCR
+			MOV		r6,#0x61		;9600 baud @15MHz VPB clock
+			STRB	r6, [r5]		;store control byte
+			MOV		r6,#3			;set DLAB = 0
+			STRB	r6, [r5, #LCR0]	;Tx and Rx buffers set up
+			LDMDB	sp!, {r5,r6,pc}
+
+TransmitR7
+			STMIA	sp!,{r5,r6,lr}
+			LDR		r5,=UOSTART
+wait7		LDRB	r6,[r5,#LSR0]	;get status of buffer
+			CMP		r6,#0x20		;buffer empty?
+			BEQ		wait7			;spin until buffer's empty
+			STRB	r7,[r5]
+			LDMDB	sp!,{r5,r6,pc}
+
+
+Transmit
+			STMIA	sp!,{r5,r6,lr}
+			LDR		r5,=UOSTART
+wait		LDRB	r6,[r5,#LSR0]	;get status of buffer
+			CMP		r6,#0x20		;buffer empty?
+			BEQ		wait			;spin until buffer's empty
+			STRB	r0,[r5]
+			LDMDB	sp!,{r5,r6,pc}
+			
+STARTMSG	DCB		"Start engraving",0XA,0
+MAGENDAVID  DCB		"1112131415161718193542434445464748535762636465666768759192939495969798",0
+DATA5X5		DCB		"12142122232425323441424344455254",0
+DATA7X7		DCB     "121416212223242526273234364142434445464752545661626364656667727476",0		
+ENDMSG		DCB		"\nDone!",0XA,0
+PRINTSPACE	DCB		" ",0 
+PRINTSTAR	DCB		"+",0
+PRINTLINE	DCB		"\n", 0
+			END

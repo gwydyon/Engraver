@@ -28,7 +28,7 @@ Engraving_speed=25; #unit=mm/sec=0.04in/sec
 
 GPIO.setup(Laser_switch,GPIO.OUT);
 
-GPIO.output(laser_switch,False);
+GPIO.output(Laser_switch,True);
 
 speed=Engraving_speed/min(dx,dy);      #step/sec
 
@@ -103,15 +103,15 @@ try:#read and execute G code
             print 'Working in mm';  
             
         elif lines[0:3]=='M05':
-            GPIO.output(laser_switch,False);
+            GPIO.output(laser_switch,True);
             print 'Laser turned off';
             
         elif lines[0:3]=='M03':
-            GPIO.output(laser_switch,True);
+            GPIO.output(laser_switch,False);
             print 'Laser turned on';
 
         elif lines[0:3]=='M02':
-            GPIO.output(laser_switch,False);
+            GPIO.output(laser_switch,True);
             print 'finished. shuting down';
             break;
         elif (lines[0:3]=='G1F')|(lines[0:4]=='G1 F'):
@@ -173,7 +173,7 @@ try:#read and execute G code
 except KeyboardInterrupt:
     pass
 
-GPIO.output(laser_switch,False);   # turn off laser
+GPIO.output(laser_switch,False);   # turn off laser
 moveto(MX,0,dx,MY,0,dy,50,False);  # move back to Origin
 
 MX.unhold();

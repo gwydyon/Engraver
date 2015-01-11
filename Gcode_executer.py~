@@ -8,7 +8,7 @@ from numpy import pi, sin, cos, sqrt, arccos, arcsin
 #################    Parameters set up       ###################################################
 
 
-filename='ninjapower.nc'; #file name of the G code commands
+filename='grid.nc'; #file name of the G code commands
 
 GPIO.setmode(GPIO.BOARD)
 
